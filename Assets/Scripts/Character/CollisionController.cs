@@ -10,10 +10,54 @@ public class CollisionController : MonoBehaviour
     private float groundTimer = 0f;
     private float groundTime = 0.15f;
     public bool IsOnGroundTime { get; private set; } = false;
+    private Rigidbody2D rb;
+
     private void Start()
     {
         playerControllerInstance = PlayerController.Instance;
+        rb = playerControllerInstance.GetComponent<Rigidbody2D>();
     }
+    
+     private void Update()
+    {
+        
+        if(rb.velocity.y < 0){
+            // playerControllerInstance.doggoAnimationHandler.SetJumping(false);
+        }
+        // else{
+        //     animator.SetBool("isJumping", true);
+        // }
+
+
+        if (IsOnGroundTime)
+        {
+            if (groundTimer < groundTime)
+            {
+                groundTimer += Time.deltaTime;
+            }
+            else
+            {
+                groundTimer = 0f;
+                IsOnGroundTime = false;
+                playerControllerInstance.inputManager.aditionalForce = 0;
+                playerControllerInstance.scoreHandler.ResetModifier();
+            }
+        }
+
+        if ((playerControllerInstance.inputManager.IsBounceTime) && (IsOnGroundTime))
+        {
+            playerControllerInstance.inputManager.IsBounceTime = false;
+            playerControllerInstance.inputManager.bounceTimer = 0f;
+            IsOnGroundTime = false;
+            groundTimer = 0f; 
+            playerControllerInstance.scoreHandler.IncreaseModifier();
+            playerControllerInstance.bounceScript.Bounce((playerControllerInstance.BounceForce * 2) + playerControllerInstance.inputManager.aditionalForce);
+            playerControllerInstance.tricksScoreManager.SetStunt(true);
+            playerControllerInstance.scoreHandler.AddScore(1*playerControllerInstance.scoreHandler.Modifier);
+            // playerControllerInstance.doggoAnimationHandler.SetJumping(true);
+        }
+    }
+   
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.collider.tag == "Tail")
@@ -21,12 +65,15 @@ public class CollisionController : MonoBehaviour
             playerControllerInstance.bounceScript.Bounce(playerControllerInstance.BounceForce);
             groundTimer = 0f;
             IsOnGroundTime = true;
+            playerControllerInstance.characterSounds.PlayJumpSound();
         }
         else
         {
-            playerControllerInstance.scoreHandler.Modifier = 0;
+            playerControllerInstance.scoreHandler.ResetModifier();
             playerControllerInstance.inputManager.aditionalForce = 0;
+            playerControllerInstance.characterSounds.PlayFallSound();
         }
+        PlayerController.Instance.tricksScoreManager.SetStunt(false);
     }
 
     private void OnCollisionStay2D(Collision2D other)
@@ -40,36 +87,6 @@ public class CollisionController : MonoBehaviour
             {
                 playerControllerInstance.bounceScript.RealignVertical(playerControllerInstance.BounceForce * mod);
             }
-        }
-    }
-
-    private void Update()
-    {
-
-        if (IsOnGroundTime)
-        {
-            if (groundTimer < groundTime)
-            {
-                groundTimer += Time.deltaTime;
-            }
-            else
-            {
-                groundTimer = 0f;
-                IsOnGroundTime = false;
-                playerControllerInstance.inputManager.aditionalForce = 0;
-                playerControllerInstance.scoreHandler.Modifier = 0;
-            }
-        }
-
-        if ((playerControllerInstance.inputManager.IsBounceTime) && (IsOnGroundTime))
-        {
-            playerControllerInstance.inputManager.IsBounceTime = false;
-            playerControllerInstance.inputManager.bounceTimer = 0f;
-            IsOnGroundTime = false;
-            groundTimer = 0f; 
-            playerControllerInstance.scoreHandler.Modifier ++;
-            playerControllerInstance.bounceScript.Bounce((playerControllerInstance.BounceForce * 2) + playerControllerInstance.inputManager.aditionalForce);
-            playerControllerInstance.scoreHandler.AddScore(1*playerControllerInstance.scoreHandler.Modifier);       
         }
     }
 

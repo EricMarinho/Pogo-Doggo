@@ -54,10 +54,10 @@ public class Leaderboard : MonoBehaviour
                 foreach(LootLockerLeaderboardMember member in members){
                     tempPlayerNames += member.rank + ". ";
                     if(member.player.name != ""){
-                        tempPlayerNames += member.player.name;
+                        tempPlayerNames += member.player.name + "\n";
                     }
                     else{
-                        tempPlayerNames += member.player.id;
+                        tempPlayerNames += member.player.id + "\n";
                     }
                     tempPlayerScores += member.score + "\n";
                 }

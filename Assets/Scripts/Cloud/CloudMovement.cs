@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CloudMovement : MonoBehaviour
 {
+    [SerializeField] float destroyPosition;
     private CloudController cloudController;
     private Animation anim;
     private float speed;
@@ -18,8 +19,7 @@ public class CloudMovement : MonoBehaviour
     {  
         transform.Translate(Vector2.left * Time.deltaTime * speed);
 
-        if (transform.position.x < -12f){
-            Debug.Log("Cloud Destroyed");
+        if (transform.position.x < destroyPosition){
             Object.Destroy(gameObject);
         }
         

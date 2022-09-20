@@ -14,7 +14,7 @@ public class InputManager : MonoBehaviour
     private float bounceTime = 0.15f;
     private float forceTimer = 0f;
     private float forceTime = 0.5f;
-    
+
     // private bool facingRight = true;
 
     void Start()
@@ -23,8 +23,11 @@ public class InputManager : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private void FixedUpdate() {
-        rb.transform.Rotate(0, 0, -Input.GetAxis("Horizontal") * 240f * Time.deltaTime, Space.Self);
+    private void FixedUpdate()
+    {
+        if (GameOverManager.Instance.isPlayble){
+            rb.transform.Rotate(0, 0, -Input.GetAxis("Horizontal") * 240f * Time.deltaTime, Space.Self);
+        }
         // Quaternion currentRotation = gameObject.transform.localRotation;
         // if((currentRotation.z < 0) && (!facingRight)){
         //     Flip();
@@ -37,40 +40,49 @@ public class InputManager : MonoBehaviour
     void Update()
     {
 
-        if(Input.GetKeyDown(KeyCode.Space)) {
-            // aumentar bounce force
-            tailAnimator.SetBool("isContracting", true);
-            aditionalForce += 1f;
-        }
-
-        if(Input.GetKey(KeyCode.Space)) {
-            // aumentar bounce force
-            if((forceTimer < forceTime) && (aditionalForce < 5f)) {
-                aditionalForce += Time.deltaTime * 1f;
-                forceTimer += Time.deltaTime;
-                Debug.Log(aditionalForce);
+        if (GameOverManager.Instance.isPlayble)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                // increase bounce force
+                tailAnimator.SetBool("isContracting", true);
+                aditionalForce += 1f;
             }
-        }
 
-        if(Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)) {
-            // fall faster
-            PlayerController.Instance.bounceScript.Fall(PlayerController.Instance.FallForce);
-        }
-     
-        if(Input.GetKeyUp(KeyCode.Space)){
-            
-            IsBounceTime = true;
-            forceTimer = 0;
-            tailAnimator.SetBool("isContracting", false);
-        }
-
-        if(IsBounceTime){
-            if(bounceTimer < bounceTime){
-                bounceTimer += Time.deltaTime;
+            if (Input.GetKey(KeyCode.Space))
+            {
+                if ((forceTimer < forceTime) && (aditionalForce < 5f))
+                {
+                    aditionalForce += Time.deltaTime * 1f;
+                    forceTimer += Time.deltaTime;
+                }
             }
-            else{
-                bounceTimer = 0;
-                IsBounceTime = false;
+
+            if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
+            {
+                // Fall faster
+                PlayerController.Instance.bounceScript.Fall(PlayerController.Instance.FallForce);
+            }
+
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                IsBounceTime = true;
+                forceTimer = 0;
+                tailAnimator.SetBool("isContracting", false);
+            }
+
+
+            if (IsBounceTime)
+            {
+                if (bounceTimer < bounceTime)
+                {
+                    bounceTimer += Time.deltaTime;
+                }
+                else
+                {
+                    bounceTimer = 0;
+                    IsBounceTime = false;
+                }
             }
         }
 

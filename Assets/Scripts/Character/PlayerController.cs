@@ -19,8 +19,12 @@ public class PlayerController : MonoBehaviour
     public InputManager inputManager;
     public BounceScript bounceScript;
     public ScoreHandler scoreHandler;
+    public TricksScoreManager tricksScoreManager;
+    public SpawnManager spawnManager;
+    public SpawnPrefabPoints spawnPrefabPoints;
+    public CharacterSounds characterSounds;
     private Rigidbody2D rb;
-    // private string playerID = "";
+    // public DoggoAnimationHandler doggoAnimationHandler;
 
     private void Awake() {
         Instance = this;
