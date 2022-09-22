@@ -27,11 +27,11 @@ Make sure you have the below requirements before starting:
 
 You can get access to Pogo Doggo source code by using one of the following ways:
 
-- [:sparkles: Download Source Code](https://github.com/EricMarinho/Pogo-Doggo-Arcade-Unity-Game-With-Online-Leaderboard/archive/master.zip)
+- [:sparkles: Download Source Code](https://github.com/EricMarinho/Pogo-Doggo/archive/master.zip)
 - Clone the repository locally:
 
 ```bash
-git clone https://github.com/EricMarinho/Pogo-Doggo-Arcade-Unity-Game-With-Online-Leaderboard.git
+git clone https://github.com/EricMarinho/Pogo-Doggo.git
 ```
 
 Also you can also play or download the build version of Pogo Doggo using the following link:
