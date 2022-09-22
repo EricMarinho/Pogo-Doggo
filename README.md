@@ -34,7 +34,7 @@ You can get access to Pogo Doggo source code by using one of the following ways:
 git clone https://github.com/EricMarinho/Pogo-Doggo-Arcade-Unity-Game-With-Online-Leaderboard.git
 ```
 
-Also you can also download the build version of Pogo Doggo using the following link:
+Also you can also play or download the build version of Pogo Doggo using the following link:
 
 - [:star: Download from Itch.io](https://ilidam.itch.io/pogo-doggo)
 
