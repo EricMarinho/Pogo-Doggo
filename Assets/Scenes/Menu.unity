@@ -4200,7 +4200,6 @@ GameObject:
   - component: {fileID: 875770079}
   - component: {fileID: 875770080}
   - component: {fileID: 875770081}
-  - component: {fileID: 875770082}
   m_Layer: 5
   m_Name: Exit Button
   m_TagString: Untagged
@@ -4378,18 +4377,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f2b243fdafd934244b7410cd817e54bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &875770082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 875770071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3914c4811ff1a74c993f9b2d343854c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &888575955
@@ -5147,7 +5134,6 @@ GameObject:
   - component: {fileID: 1003271184}
   - component: {fileID: 1003271190}
   - component: {fileID: 1003271191}
-  - component: {fileID: 1003271192}
   m_Layer: 5
   m_Name: Rules Button
   m_TagString: Untagged
@@ -5327,18 +5313,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1003271192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1003271182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3914c4811ff1a74c993f9b2d343854c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1005069968
 GameObject:
   m_ObjectHideFlags: 0
@@ -6502,7 +6476,6 @@ GameObject:
   - component: {fileID: 1202770365}
   - component: {fileID: 1202770371}
   - component: {fileID: 1202770372}
-  - component: {fileID: 1202770373}
   m_Layer: 5
   m_Name: Options Button
   m_TagString: Untagged
@@ -6682,18 +6655,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1202770373
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1202770363}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3914c4811ff1a74c993f9b2d343854c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1218401449
 GameObject:
   m_ObjectHideFlags: 0
