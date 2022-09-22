@@ -1,5 +1,6 @@
 # Pogo Doggo
 <img align="right" src="https://img.itch.zone/aW1nLzEwMDc0NzEzLnBuZw==/315x250%23c/dbck0%2B.png" width= 200/>
+
 Pogo Doggo is an arcade game with online leaderboard made in 3 days for the [ScoreSpace GameJam #21](https://itch.io/jam/scorejam21)
 
 It's free and open source. :clap:
@@ -40,22 +41,26 @@ Also you can also download the build version of Pogo Doggo using the following l
 ## Screenshots
 
 <p align="center">
-  <img src="screenshot1.png"/>
+  <img src="https://img.itch.zone/aW1hZ2UvMTcxMDA4MS8xMDA3NDc0OC5wbmc=/original/z%2F%2BOU4.png"/>
 </p>
 
 <p align="center">
-  <img src="screenshot2.png"/>
+  <img src="https://img.itch.zone/aW1hZ2UvMTcxMDA4MS8xMDA3NDc0Ny5wbmc=/original/oG36nE.png"/>
 </p>
 
 <p align="center">
-  <img src="screenshot3.png"/>
+  <img src="https://img.itch.zone/aW1hZ2UvMTcxMDA4MS8xMDA5OTA5OC5wbmc=/original/wDd2n%2B.png"/>
+</p>
+
+<p align="center">
+  <img src="https://img.itch.zone/aW1hZ2UvMTcxMDA4MS8xMDA5OTEwNC5wbmc=/original/gh0t2G.png"/>
 </p>
 
 ## Credits
 
 - Game Engine: [Unity](https://unity3d.com/)
 - Thanks to all of the game development community for their awesome help.
-- [Gustavo de Paula Zago]() for the amazing arts and music
+- Thanks to [Gustavo de Paula Zago](https://github.com/Zagoou) for the amazing arts and music
 
 ## License
 
