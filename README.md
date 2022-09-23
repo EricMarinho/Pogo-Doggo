@@ -61,7 +61,7 @@ Also you can also play or download the build version of Pogo Doggo using the fol
 - Game Engine: [Unity](https://unity3d.com/)
 - BaaS: [LootLocker](https://www.lootlocker.com/) 
 - Thanks to all of the game development community for their awesome help.
-- Thanks to [Gustavo de Paula Zago](https://github.com/Zagoou) for the amazing arts and music
+- Thanks to [Gustavo de Paula Zago](https://github.com/Zagoou) for the amazing arts and music.
 
 ## License
 
