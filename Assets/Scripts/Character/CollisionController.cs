@@ -21,9 +21,9 @@ public class CollisionController : MonoBehaviour
      private void Update()
     {
         
-        if(rb.velocity.y < 0){
+        // if(rb.velocity.y < 0){
             // playerControllerInstance.doggoAnimationHandler.SetJumping(false);
-        }
+        // }
         // else{
         //     animator.SetBool("isJumping", true);
         // }
@@ -69,8 +69,10 @@ public class CollisionController : MonoBehaviour
         }
         else
         {
-            playerControllerInstance.scoreHandler.ResetModifier();
-            playerControllerInstance.inputManager.aditionalForce = 0;
+            if(transform.position.y < -4.3f){
+                playerControllerInstance.scoreHandler.ResetModifier();
+                playerControllerInstance.inputManager.aditionalForce = 0;
+            }
             playerControllerInstance.characterSounds.PlayFallSound();
         }
         PlayerController.Instance.tricksScoreManager.SetStunt(false);

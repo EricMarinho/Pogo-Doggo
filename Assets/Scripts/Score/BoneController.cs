@@ -31,7 +31,7 @@ public class BoneController : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             instance.characterSounds.PlayPickBonesSound();
-            instance.scoreHandler.AddScore(20 * instance.scoreHandler.Modifier);
+            instance.scoreHandler.AddScore(150 * instance.scoreHandler.Modifier);
             instance.spawnManager.SpawnBone();
             Object.Destroy(gameObject);
         }
