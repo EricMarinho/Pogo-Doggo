@@ -36,7 +36,7 @@ git clone https://github.com/EricMarinho/Pogo-Doggo.git
 
 Also you can also play or download the build version of Pogo Doggo using the following link:
 
-- [:star: Download from Itch.io](https://ilidam.itch.io/pogo-doggo)
+- [:star: Itch.io](https://ilidam.itch.io/pogo-doggo)
 
 ## Screenshots
 
