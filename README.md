@@ -34,9 +34,10 @@ You can get access to Pogo Doggo source code by using one of the following ways:
 git clone https://github.com/EricMarinho/Pogo-Doggo.git
 ```
 
-Also you can also play or download the build version of Pogo Doggo using the following link:
+Also you can also play or download the build version of Pogo Doggo using one of the followings links:
 
 - [:star: Itch.io](https://ilidam.itch.io/pogo-doggo)
+- [:star: Game Jolt](https://gamejolt.com/games/pogo-doggo/752371)
 
 ## Screenshots
 
