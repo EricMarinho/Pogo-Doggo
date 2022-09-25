@@ -14,7 +14,9 @@ Follow the below instructions to get started with Pogo Doggo source code:
 
 1. [Make sure you have all Requirements](#requirements)
 2. [Download Source Code](#download)
-3. Open Project in Unity and Enjoy!
+3. Create a LootLocker account and follow the documentation.
+4. Open Project in Unity, change the LootLocker API Key: Edit > Project Settings > LootLocker SDK > API Key
+5. Enjoy!
 
 ## Requirements
 
