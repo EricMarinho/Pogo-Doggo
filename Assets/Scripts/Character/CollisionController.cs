@@ -20,14 +20,6 @@ public class CollisionController : MonoBehaviour
     
      private void Update()
     {
-        
-        // if(rb.velocity.y < 0){
-            // playerControllerInstance.doggoAnimationHandler.SetJumping(false);
-        // }
-        // else{
-        //     animator.SetBool("isJumping", true);
-        // }
-
 
         if (IsOnGroundTime)
         {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CloudMovement : MonoBehaviour
 {
-    [SerializeField] float destroyPosition;
+    [SerializeField] private float destroyPosition;
     private CloudController cloudController;
     private Animation anim;
     private float speed;
