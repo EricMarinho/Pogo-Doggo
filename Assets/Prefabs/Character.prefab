@@ -307,6 +307,7 @@ MonoBehaviour:
   scoreHandler: {fileID: 5060001931013770316}
   tricksScoreManager: {fileID: 2901734625525949347}
   spawnManager: {fileID: 0}
+  spawnPrefabPoints: {fileID: 0}
   characterSounds: {fileID: 1596600074}
 --- !u!114 &2901734626760536320
 MonoBehaviour:

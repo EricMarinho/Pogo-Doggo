@@ -7,10 +7,12 @@ public class BoneController : MonoBehaviour
     private float timer = 0f;
     private float time = 10f;
     private PlayerController instance;
-    
+    private PoolSpawner spawner;
+
     private void Start()
     {
         instance = PlayerController.Instance;
+        spawner = ObjectPooler.instance.poolSpawner;
     }
 
      private void Update()
@@ -22,7 +24,8 @@ public class BoneController : MonoBehaviour
         else
         {
             instance.spawnManager.SpawnBone();
-            Object.Destroy(gameObject);
+            spawner.ReturnToPool("Bone",gameObject);
+            timer = 0f;
         }
     }
 
@@ -33,7 +36,7 @@ public class BoneController : MonoBehaviour
             instance.characterSounds.PlayPickBonesSound();
             instance.scoreHandler.AddScore(150 * instance.scoreHandler.Modifier);
             instance.spawnManager.SpawnBone();
-            Object.Destroy(gameObject);
+            spawner.ReturnToPool("Bone", gameObject);
         }
     }
 

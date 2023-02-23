@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class CloudController : MonoBehaviour
 {
+    private PoolSpawner poolSpawner;
+
     private float timer = 0f;
     private float time = 0f;
-    [SerializeField] GameObject cloudPrefab;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        poolSpawner = ObjectPooler.instance.poolSpawner;
+    }
+
     void Update()
     {
         if (timer < time){
@@ -24,7 +29,8 @@ public class CloudController : MonoBehaviour
 
     public void SpawnCloud()
     {
-        GameObject cloud = Instantiate(cloudPrefab, transform);
+        GameObject cloud = poolSpawner.SpawnFromPool("Cloud", transform.position, Quaternion.identity);
+        cloud.transform.parent = transform;
         Vector2 randomPosition = new Vector2(380f, Random.Range(-350f, 450f));
         float randomSize = Random.Range(1f, 2f);
         cloud.transform.localPosition = randomPosition;

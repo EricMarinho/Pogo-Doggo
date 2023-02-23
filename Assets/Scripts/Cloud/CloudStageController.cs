@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class CloudStageController : MonoBehaviour
 {
-   private float timer = 0f;
+    private float timer = 0f;
     private float time = 0f;
-    [SerializeField] GameObject cloudPrefab;
+    private PoolSpawner poolSpawner;
 
+    private void Start()
+    {
+        poolSpawner = ObjectPooler.instance.poolSpawner;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -24,7 +28,8 @@ public class CloudStageController : MonoBehaviour
 
     public void SpawnCloud()
     {
-        GameObject cloud = Instantiate(cloudPrefab, transform);
+        GameObject cloud = poolSpawner.SpawnFromPool("Cloud", transform.position, Quaternion.identity);
+        cloud.transform.parent = transform;
         Vector2 randomPosition = new Vector2(10f, Random.Range(-1f, 4f));
         float randomSize = Random.Range(1f, 2f);
         cloud.transform.localPosition = randomPosition;
