@@ -35,17 +35,14 @@ public class OptionsHandler : MonoBehaviour
         resolutionDropDown.value = currentResolutionIndex;
         resolutionDropDown.RefreshShownValue();
         qualityDropDown.value = QualitySettings.GetQualityLevel();
-        volumeSlider.value = PlayerPrefs.GetFloat("volumePref");
-
-        
-
+        volumeSlider.value = PlayerPrefs.GetFloat("volumePref", 1f);
     }
 
     public void setVolume(float volume){
-        
+
         PlayerPrefs.SetFloat(volumePref, volume);
-        audioMixer.SetFloat("Volume", PlayerPrefs.GetFloat("volumePref"));
-        
+        audioMixer.SetFloat("Volume", Mathf.Log10(PlayerPrefs.GetFloat("volumePref")) * 20);
+
     }
 
     public void setQuality(int qualityIndex){

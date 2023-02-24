@@ -31,7 +31,7 @@ public class CloudController : MonoBehaviour
     {
         GameObject cloud = poolSpawner.SpawnFromPool("Cloud", transform.position, Quaternion.identity);
         cloud.transform.parent = transform;
-        Vector2 randomPosition = new Vector2(380f, Random.Range(-350f, 450f));
+        Vector2 randomPosition = new Vector2(650f, Random.Range(-350f, 450f));
         float randomSize = Random.Range(1f, 2f);
         cloud.transform.localPosition = randomPosition;
         cloud.transform.localScale = new Vector3(randomSize, randomSize, 1f);

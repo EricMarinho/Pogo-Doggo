@@ -1921,10 +1921,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1487760217}
   m_HandleRect: {fileID: 1650849247}
   m_Direction: 0
-  m_MinValue: -45
-  m_MaxValue: 2
+  m_MinValue: 0.0001
+  m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -7950,7 +7950,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.9574468, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -8523,7 +8523,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: defa4d8e608554b4ea6e2e503fdf5c46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cloudPrefab: {fileID: 2081260359432505399, guid: f74ff1df41c84fb45a474c52a44cdb28, type: 3}
 --- !u!1 &1579548865
 GameObject:
   m_ObjectHideFlags: 0
@@ -8786,8 +8785,8 @@ RectTransform:
   m_Father: {fileID: 2011943593}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.9574468, y: 0}
-  m_AnchorMax: {x: 0.9574468, y: 1}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
