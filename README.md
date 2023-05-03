@@ -1,7 +1,7 @@
 # Pogo Doggo
 <img align="right" src="https://img.itch.zone/aW1nLzEwMDc0NzEzLnBuZw==/315x250%23c/dbck0%2B.png" width= 200/>
 
-Pogo Doggo is an arcade game me in Unity with online leaderboard using LootLocker made in 3 days for the [ScoreSpace GameJam #21](https://itch.io/jam/scorejam21)
+Pogo Doggo is an arcade game made in Unity with online leaderboard using LootLocker made in 3 days for the [ScoreSpace GameJam #21](https://itch.io/jam/scorejam21)
 
 It's free and open source. :clap:
 
